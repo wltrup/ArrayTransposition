@@ -10,6 +10,7 @@
 **ArrayTransposition** is a Swift Package Manager package for iOS/tvOS (10.0 and above), watchOS (4.0 and above), and macOS (10.14 and above), under Swift 5.0 and above, adding an extension to `Array` to allow the computation of *matrix transpositions*.
 
 Given an array of arrays of an `Element` type, with the internal arrays all of the same length, the package defines a function to transpose the outmost array. For example, if
+
 ```swift
 let x = [
     [1, 2, 3],
@@ -19,10 +20,12 @@ let x = [
 ]
 ```
 then
+
 ```swift
 let y = transpose(x)
 ```
 will produce the same result as
+
 ```swift
 let y = [
     [1, 4, 7, 10],
@@ -34,6 +37,7 @@ let y = [
 Note that the internal arrays need to have the same size. If this condition isn't met, then the result is `nil`.
 
 The API is very simple:
+
 ```swift
 extension Array {
 
@@ -47,10 +51,6 @@ Unfortunately, it's not possible to define a non-static `transposed()` function,
 ## Installation
 
 **ArrayTransposition** is provided only as a Swift Package Manager package, because I'm moving away from CocoaPods and Carthage, and can be easily installed directly from Xcode.
-
-## Author
-
-Wagner Truppel, trupwl@gmail.com
 
 ## License
 
